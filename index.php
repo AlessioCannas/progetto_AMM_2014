@@ -1,16 +1,21 @@
 <!DOCTYPE html>
+<?php
+@require('FUNZIONI_PHP_ESTERNE/visualizza.php');
+@require('FUNZIONI_PHP_ESTERNE/cerca_esterno.php');
+
+?>
 
 <?php
-	//$conn= mysql_connect("localhost","root","");   
-        $conn= mysql_connect("localhost","cannasAlessio","volpe795");
+	$conn= mysql_connect("localhost","root","");   
+        //$conn= mysql_connect("localhost","cannasAlessio","volpe795");
 	if(!$conn)
 	{
 		die("connessione FALLITA".mysql_error());
 	}
 	
 
-	//$db= mysql_select_db("amm_alessio",$conn); 
-        $db= mysql_select_db("amm14_cannasAlessio",$conn);
+	$db= mysql_select_db("amm_alessio",$conn); 
+        //$db= mysql_select_db("amm14_cannasAlessio",$conn);
 	if(!$conn)
 	{
 		die("connessione FALLITA ad amm_alessio".mysql_error());
@@ -19,329 +24,161 @@
 
 <html>
 	<head>
-
-	
-
-		<style>
-		
-		
-
-
-		body{ background:#000; margin:0px; }
-			
-			/* posizione logo */
-			#logo {
-					position:relative;
-					left: 400px;
-						
-			      }
-
-
-			/* posizione barra di navigazione */
-			div#menubar1{ 
-					padding: 24px; 
-					border:#FFF 1px dashed; 
-					background:#333; 
-					border-radius: 10px 10px 10px 10px;
-					border-color: #1C1C1C;
-					border-style: solid; 
-
-					margin-right: 300px;
-				    }
-	
-			div#menubar1 > a {
-    						font-family:Arial, Helvetica, sans-serif;
-    						font-size:17px;
-    						background: #333;
-    						padding: 12px 24px;
-    						color:#FFF;
-    						margin-right: 10px;
-    						text-decoration:none;
-    						border-radius: 3px;
-    						transition: background 0.3s linear 0s, color 0.3s linear 0s;
-					}
-		
-			div#menubar1 > a:hover	{
-    							background: #6F8A00;
-    							color:#FFF;
-						}
-
-
-			/* posizione del login */
-			div#menubar2{ 
-					padding:20px 90px; 
-					border:#999 1px dashed; 
-					border-radius: 50px 50px 50px 50px;
-					border-color: #228B22;
-					border-style: solid; 
-
-					margin-left: 1300px;
-				    }
-	
-			div#menubar2 > a{
-    						font-family:Arial, Helvetica, sans-serif;
-    						font-size:17px;
-    						background: #333;
-    						padding: 12px 40px;
-    						color:#999;
-    						margin-right: 10px;
-    						text-decoration:none;
-    						border-radius: 3px;
-    						transition: background 0.3s linear 0s, color 0.3s linear 0s;
-					}
-		
-			div#menubar2 > a:hover	{
-    							background: #6F8A00;
-    							color:#FFF;
-						}
-
-			div#menubar2 {
-						position:absolute;
-						right: 10px;
-						top: 320px;
-
-						
-    						background: #222;
-						border-width: 100px;
-    						
-    						overflow: hidden;
- 
-    						-moz-border-radius: 20px;
-    						-webkit-border-radius: 20px;
-    						
-
-						background: #1C1C1C; /* Colore di sfondo */
-    						border: 1px solid #323232; /* Bordo */
-    						color: #fff; /* Colore del testo */
-   
-						
-				     }
-			
-			form#tb_login > input {
-							width: 100px;
-
-							position:relative;
-							left: 130px;
-							top: -30px;	
-					      }
-			
-			#login {
-					position:relative;
-					
-					top: 10px;
-
-					width: 50px;
-					height: 50px;
-					      }
-			
-
-			/* posizione inserimento dati*/
-			div#menubar4{ 
-						position: relative;
-						
-						margin-left: 100px;
-						margin-right: 100px;
-
-						padding: 24px; 
- 
-						background: #222;
-						border-width: 100px;
-    						
-    						overflow: hidden;
- 
-    						-moz-border-radius: 20px;
-    						-webkit-border-radius: 20px;
-    						
-
-						background: #1C1C1C; /* Colore di sfondo */
-    						
-    						color: #fff; /* Colore del testo */
-				    }
-	
-			div#menubar4 > a{
-						position: relative;
-						margin-top: 100px;
-						margin-left: 550px;
-						
-
-    						font-family:Arial, Helvetica, sans-serif;
-    						font-size:17px;
-    						background: #333;
-    						padding: 12px 24px;
-    						color:#FFF;
-    						margin-right: 10px;
-    						text-decoration:none;
-    						border-radius: 3px;
-    						transition: background 0.3s linear 0s, color 0.3s linear 0s;
-					}
-		
-			div#menubar4 > a:hover	{
-    							background: #6F8A00;
-    							color:#FFF;
-						}
-
-			h1 {
-						position:relative;
-						margin-bottom: 150px;
-
-					  	text-indent:50px;
-						
-					  }
-
-			
-			h3 {
-					position:relative;
-					margin-left: 50px;
-					margin-top: -150px;
-			   }
-
-			
-			div#logo1 {
-					position:relative;
-					left: 100px;
-						
-			      	}
-			
-			iframe#id_trailer {
-						position:relative;
-						margin-left: 50px;
-
-						display: none;
-			      		  }
-			
-			h1 { color: #FFFFFF; }
-
-
-			
-    			
- 			
-
-		</style>
-
+            <link   rel="stylesheet"    type="text/css" href="sito_css.css" media="screen">
+                
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 	</head>
 
 	<body>
-		<img id="logo" src="GameStop-Logo.jpg" alt="testo" />
+		<img id="logo" src="http://www.leviathyn.com/wp-content/uploads/2012/09/GameStop-Logo.jpg" alt="testo" />
 		
-		
+		<?php
+                    session_start(); 
+                ?>
 
 		<div id="menubar1">
-  			<a id="PC" href="#">		PC</a>
-			<a id="Ps3 "href="#">		Ps3</a>
-			<a id="Ps4" href="#">		Ps4</a>
-			<a id="Xbox360" href="#">	Xbox360</a>
-			<a id="XboxOne" href="#">	XboxOne</a>
-			<a id="Nintendo wiiU" href="#">	Nintendo wiiU</a>
-			<a id="Accessori" href="#">	Accessori</a>
-			<a id="Offerte" href="#">	Offerte</a>	
-			<a id="Cerca" href="#">		Cerca</a>
-			<a id="Negozi" href="#">	Negozi</a>
-
+                    <form id="menu1" action="index.php" method="post">
+                        <input  type="submit" name="PC" value="PC"/>
+                        <input type="submit" name="Ps3" value="Ps3"/>
+                        <input type="submit" name="Ps4" value="Ps4"/>
+                        <input type="submit" name="Xbox360" value="Xbox360"/>
+			<input type="submit" name="XboxOne" value="XboxOne"/>
+			<input type="submit" name="Nintendo wiiU" value="Nintendo wiiU"/>
+			<input type="submit" name="Accessori" value="Accessori"/>
+			<input type="submit" name="Offerte" value="Offerte"/>	
+			<input type="submit" name="Cerca" value="Cerca"/>
+			<input type="submit" name="Negozi" value="Negozi"/>
+                    </form>
 		</div>
 
 		
-
+                
 
 		<div id="menubar2">
-	
-  			<a class ="#" id="login">login</a>
 			
+                       <?php
+                        
+                       
+                       
+                                         if( !isset( $_SESSION['id']) )
+                                         {
+                                             $nome = ",esegui il login";
+                                         }   
+                                         else 
+                                         {
+                                             $nome = $_SESSION['nome'];
+                                         }
+                                         
+                                         echo "<h4>Benvenuto ".$nome."! </h4>";
+                                         
+                       
+                                       
+                       
+                                         if( isset($_POST['login']))
+                                         {
+                                             
+                                                     
+                                             $nome = $_POST['user'];
+                                             $pass = $_POST['password'];
 
-			<form id="tb_login"action="demo_form.asp" method="get">
+                                                $nome_d = "utente";
+                                                $pass_d = "password";
 
-				<input type="text" name="corto" id="tb_nomeUtente" value="nome utente" />
-				<br></br>
-				<input type="password" name="pswd” "id="tb_pswd" value="oscurato" />
+                                                $Risultato= mysql_query ("SELECT * from utenti ", $conn );
 
-			</form>
-			
-			<a id="#" href="file:///C:/Users/alessio/Desktop/sito_amm/registrazione.html">Registrati</a>
-		</div>
+                                               while($riga= mysql_fetch_array ($Risultato) )
+                                               {
+                                                   $utente_id = $riga['id'];
+                                                   $nome_d = $riga['nome'];
+                                                   $pass_d = $riga['password'];
 
-		<?php 
-	
-			$piattaforma = "'Ps3'";			
+                                                    if( $nome==$nome_d && $pass==$pass_d )
+                                                    {
+                                                         if ( !isset( $_SESSION['id']) )
+                                                                $_SESSION['id'] = $utente_id;
+                                                         if ( !isset( $_SESSION['logged']) )
+                                                                $_SESSION['logged'] = TRUE;
+                                                         if ( !isset( $_SESSION['nome']) )
+                                                                $_SESSION['nome'] = $nome;
+                                                         
+                                                         break;
+                                                         $loggato = TRUE;
 
-			/* ID */
-			$id="menubar4";
-			$id_prezzo ="id_prezzo";
-			$id_trailer ="id_trailer";
-			$id_vedi ="id_vedi";
+                                                    }
 
-			/* CONTENUTO */
-			$titolo = "titolo gioco";
-			$foto="GameStop-Logo.jpg";
-			$prezzo ="prezzo";
-			$descrizione = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+                                               }
+                                               header ("Location: index.php");
+                                         }
+                                         
+                                       
+                                ?>	
 
-			/* PARAMETRI */
-			$width= "200";
-			$height = "250";
-
-			$width1= "700";
-			$height1 = "500";
-
-			$border ="0";
-
-			$Risultato= mysql_query ("SELECT * from giochi where piattaforma = ".$piattaforma." ", $conn );
-
-			while($riga= mysql_fetch_array ($Risultato) )
-			{
-				$titolo = $riga[titolo]; 
-				$prezzo = $riga[prezzo];
-				$prezzo = (string)$prezzo;
-				$foto = "copertinePs3/".$riga[foto];
-				$trailer = $riga[trailer];
+                    <form id="tb_login" action="index.php" method="post">
+                                
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="submit" name="login" id="login" value="login"<input>
+                                        <input type="submit" name="logout" id="logout" value="logout"<input>
+                                    </td>
+                                    
+                                    <td>
+                                        <input type="text" name="user" id="user" value="user" />
+                                        <br></br>
+                                        <input type="password" name="password" id="password" value="password" />
+                                    </td>
+                                </tr>
+                            </table>
 				
-				echo "<div id=$id >
-					
-					<table border=$border >
-    						<tr>
-       							<td>
-								<img id=$id src=$foto alt=$foto width=$width height=$height  />
-							</td>
-       							<td>	
-								<table border=$border >
-    									<tr>
-       								
-											<h1>$titolo</h1>
-									</tr>	
-       									<tr>		
-											<h3>$descrizione</h2>
-											<iframe id=$id_trailer width=$width1 height=$height1 src=$trailer frameborder=$border allowfullscreen></iframe>
-   									
+	
+			</form>
 
-									</tr>
-								</table>
-							</td>
-							<td>	
-								<h1 id=$id_prezzo >$prezzo</h1>
-							</td>
-   						</tr>
-					</table>
-					
-					<a id=$id_vedi>Vedi</a>
-					
-				      </div>";		
-			}
-					
-		?>
-
-		<script type="text/javascript">
+			<a id="registrati" href="file:///C:/Users/alessio/Desktop/sito_amm/registrazione.html">Registrati</a>
+		</div>
+                
+                
+                
+            <?php
+                        if ( isset($_POST['Ps3']) )
+                        {
+                            vedi("'Ps3'");
+                            
+                        }
+                        
+                        
+                        if ( isset($_POST['Xbox360']) )
+                        {
+                            vedi("'Xbox360'");
+                            
+                        }
+                        
+                        if ( isset($_POST['Cerca']) )
+                        {
+                            stampa_cerca();
+                            
+                        }
+                        
+                        if ( isset($_POST['logout']) )
+                        {
+                            session_destroy();
+                            header ("Location: index.php");
+                        }
+                              
+             
+                ?>
+                
+                <script type="text/javascript">
     
 				
 			$(function(){
         			$('#id_vedi').click(function()
 				{
 
-          				if( $('iframe#id_trailer').css('display') == 'block' )
-            					$('iframe#id_trailer').css('display','none');
+          				if( $('iframe').css('display') == 'block' )
+            					$('iframe').css('display','none');
          				 else
-            					$('iframe#id_trailer').css('display','block');
+            					$('iframe').css('display','block');
 
 
           				return false;
@@ -349,10 +186,6 @@
    			});
   
 		</script>
-		
-
-		<footer>
-		</footer>
 
 	</body>
 </html>
