@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-@require('FUNZIONI_PHP_ESTERNE/visualizza.php');
-@require('FUNZIONI_PHP_ESTERNE/cerca_esterno.php');
+@require('visualizza.php');
+//@require('FUNZIONI_PHP_ESTERNE/cerca_esterno.php');
 
 ?>
 
