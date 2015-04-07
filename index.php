@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-@require('visualizza.php');
+@require('http://spano.sc.unica.it/amm2014/cannasAlessio/visualizza.php');
 //@require('FUNZIONI_PHP_ESTERNE/cerca_esterno.php');
 
 ?>
