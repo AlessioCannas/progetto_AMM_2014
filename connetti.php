@@ -3,7 +3,7 @@
 function connetti ()
 {
         //$conn= mysql_connect("localhost","root","");   
-        conn= mysql_connect("localhost","cannasAlessio","volpe795");
+        $conn= mysql_connect("localhost","cannasAlessio","volpe795");
 	if(!$conn)
 	{
 		die("connessione FALLITA".mysql_error());
