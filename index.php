@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-@require('spano.sc.unica.it/amm2014/cannasAlessio/visualizza.php');
+include('visualizza.php');
 
 
 ?>
