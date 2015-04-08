@@ -1,6 +1,6 @@
 <?php
 
-@require('spano.sc.unica.it/amm2014/cannasAlessio/connessione.php');
+include('connessione.php');
 
 
 function vedi ($piattaforma)
