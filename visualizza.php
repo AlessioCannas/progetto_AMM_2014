@@ -1,6 +1,6 @@
 <?php
 
-include('connessione.php');
+include('connetti.php');
 
 
 function vedi ($piattaforma)
