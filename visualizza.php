@@ -48,7 +48,7 @@ function vedi ($piattaforma)
                                             <table border=$border >
                                                     <tr>
                                                             <td>
-                                                                    <img id=$id src='$foto' alt=$foto width=$width height=$height  />
+                                                                    <img id=$id src=".$foto." alt=$foto width=$width height=$height  />
                                                             </td>
                                                             <td>	
                                                                     <table border=$border >
