@@ -153,7 +153,7 @@ include('visualizza.php');
                             
                         }
                         
-                        if ( isset($_POST['Xbox360']) )
+                        if ( isset($_POST['Ps4']) )
                         {
                             vedi("'Ps4'");
                             
