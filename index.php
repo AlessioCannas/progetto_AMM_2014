@@ -153,6 +153,12 @@ include('visualizza.php');
                             
                         }
                         
+                        if ( isset($_POST['Xbox360']) )
+                        {
+                            vedi("'Ps4'");
+                            
+                        }
+                        
                         if ( isset($_POST['Cerca']) )
                         {
                             stampa_cerca();
