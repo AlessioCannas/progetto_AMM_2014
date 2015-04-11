@@ -40,7 +40,7 @@ function vedi ($piattaforma)
                                     $titolo = $riga[titolo]; 
                                     $prezzo = $riga[prezzo];
 
-                                    $foto = "copertine".$riga[piattaforma]."/".$riga[foto];
+                                    $foto = $riga[foto];
                                     $trailer = $riga[trailer];
 
                                     echo "<div id=$id >
