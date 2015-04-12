@@ -112,7 +112,7 @@ function vedi_cerca ($titolo,$piattaforma)
 				$titolo = $riga[titolo]; 
 				$prezzo = $riga[prezzo];
 				$prezzo = (string)$prezzo;
-				$foto = "copertine".$riga[piattaforma]."/".$riga[foto]."";
+				$foto = $riga[foto];
 				$trailer = $riga[trailer];
 				
 				echo "<div id=$id >
