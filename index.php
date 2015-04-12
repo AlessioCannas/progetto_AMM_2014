@@ -171,6 +171,105 @@ include('visualizza.php');
                             
                         }
                         
+                        if ( isset($_POST['Invia']) )
+                        {
+                            cerca();
+                            
+                            $titolo = $_POST['titolo'];
+                            $piattaf = $_POST['piattaforma'];
+                                                
+                            if( $piattaf=='empty' )
+                                $piattaf =" " ;
+                            else 
+                                $piattaforma = " and piattaforma = '".$piattaf."'";
+                                                                  
+				$titolo = "'".$titolo."%' ";
+                                
+                                vedi_cerca($titolo,$piattaforma);
+                        }
+                        
+                        //REGISTRAZIONE
+                        if ( isset($_POST['registrati']) )
+                        {
+                            registrati_stampa(FALSE,FALSE,FALSE,FALSE);
+                        }
+                        
+                        if ( isset($_POST['conferma']) )
+                        {
+                            $insert = FALSE;
+                            
+                                               $id = "NULL";
+                                               $nome = $_POST['nome_register'];
+                                               $cognome = $_POST['cogn_register'];
+                                               $dataNascita = "".$_POST['anno']."-".$_POST['mese']."-".$_POST['giorno']."";
+                                               $email = $_POST['email_register'];
+                                               $password = $_POST['pass_register'];
+                                               
+                                         
+                                               
+                                               if( empty($nome) || empty($cognome) )
+                                               {
+                                                   $nome_error = TRUE;
+                                               }
+                                               else 
+                                               {
+                                                   $nome_error = FALSE;
+                                               }
+                                               
+                                               /*
+                                               echo "<script type="."text/javascript".">
+
+                                                           
+                                                                $('iframe').css('display','none');
+                                                           
+                                                                $('iframe').css('display','block');
+
+                                                            </script>";
+                                               */
+                                               if( $_POST['anno']=="empty" || $_POST['mese']=="empty" || $_POST['giorno']=="empty" )
+                                               {  
+                                                   $data_error = TRUE;
+                                               }
+                                               else 
+                                               { 
+                                                   $data_error = FALSE;
+                                               }
+                                               
+                                               if( empty($email)  )
+                                               {  
+                                                   $email_error = TRUE;
+                                               }
+                                               else 
+                                               { 
+                                                   $email_error = FALSE;
+                                               }
+                                               
+                                               if( empty($password)  )
+                                               {  
+                                                   $password_error = TRUE;
+                                               }
+                                               else 
+                                               { 
+                                                   $password_error = FALSE;
+                                               }
+                                               
+                                               if( empty($nome) || empty($cognome) ||
+                                                   $_POST['anno']=="empty" || $_POST['mese']=="empty" || $_POST['giorno']=="empty" ||
+                                                   empty($email) || empty($password)  )
+                                               {  
+                                                   $insert = FALSE;
+                                               }
+                                               else 
+                                               { 
+                                                   $insert = TRUE;
+                                               }
+                                               
+                                               if($insert)
+                                                    registrati (NULL,$nome,$cognome,$dataNascita,$email,$password);
+                                               else 
+                                                   registrati_stampa();
+                        }
+                        
                         if ( isset($_POST['logout']) )
                         {
                             session_destroy();
