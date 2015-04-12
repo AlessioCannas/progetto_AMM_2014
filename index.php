@@ -167,7 +167,7 @@ include('visualizza.php');
                         
                         if ( isset($_POST['Cerca']) )
                         {
-                            stampa_cerca();
+                            cerca();
                             
                         }
                         
