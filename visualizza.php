@@ -191,7 +191,7 @@ function cerca()
 		</div>";
 }
 
-function registrati_stampa($nome,$data_nascita,$email,$password)
+function registrati_stampa()
 {
     echo "<div>
 			<div id="."menubar6".">
@@ -202,11 +202,8 @@ function registrati_stampa($nome,$data_nascita,$email,$password)
 				<input name="."nome_register"." id="."nome_r"." type="."text"."/>
 
 				<label for="."cognome".">Cognome</label>
-				<input name="."cogn_register"." id="."cogn_r"." type="."text"."/>";
-          if($nome)
-              echo "<label for="."cognome"." id="."nome_mancante"." class="."errore"." > Nome o Cognome mancanti</label>";                  
-                                
-    echo "                           
+				<input name="."cogn_register"." id="."cogn_r"." type="."text"."/>
+                                   
     			<br><br/>
 				<label for="."dataNascita".">Data di nascita</label>
 				
@@ -275,30 +272,23 @@ function registrati_stampa($nome,$data_nascita,$email,$password)
 						<option value="."1999".">1999</option>
 						<option value="."2000".">2000</option>
 						<option value="."2001".">2001</option>
-					</select>";
+					</select>
 				
-     if($data)                                   
-        echo "<label for="."cognome"." id="."data_mancante"." class="."errore"." > Data di nascita mancante </label>";
+     
 
 
 				
-				echo "
+			
 				<br><br/>
 				<label for="."email".">Indirizzo e-mail</label>
-				<input name="."email_register"." id="."email"." type="."text"."/>";
+				<input name="."email_register"." id="."email"." type="."text"."/>
 
-                                 if($email)
-                                    echo "<label for="."cognome"." id="."email_error"." class="."errore"." > email non valida </label>";
-                                
-                                    echo "<br><br/>
+                                 <br><br/>
 				<label for="."pass"."> Password </label>
-				<input name="."pass_register"." id="."pswd"." type="."text"."/>";
+				<input name="."pass_register"." id="."pswd"." type="."text"."/>
 				
  
-                                if($password)
-                                    echo "<label for="."cognome"." id="."pass_error"." class="."errore"." > Password non valida </label>";
-                                
-                                    echo "<br><br/>
+                                <br><br/>
 				password (La password deve avere almeno 8 caratteri di cui almeno: un numero (da 0 a 9) , una lettera minuscola ed una lettera maiuscola. )
 
 				<br><br/>
