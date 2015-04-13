@@ -265,9 +265,20 @@ include('visualizza.php');
                                                }
                                                
                                                if($insert)
-                                                    registrati (NULL,$nome,$cognome,$dataNascita,$email,$password);
+                                               {
+                                               	    registrati (NULL,$nome,$cognome,$dataNascita,$email,$password);
+                                               	    echo "<script type="."text/javascript".">
+                                               	    		alert('ti sei registrato correttamente');	
+                                               	    	  </script>";
+                                               }
                                                else 
-                                                   registrati_stampa();
+                                               {
+                                               	    echo "<script type="."text/javascript".">
+                                               	    		alert('non hai inserito tutti i dati');	
+                                               	    	  </script>";
+                                               	    registrati_stampa();
+                                               }
+                                                   
                         }
                         
                         if ( isset($_POST['logout']) )
