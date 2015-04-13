@@ -131,10 +131,10 @@ include('visualizza.php');
                                 </tr>
                             </table>
 				
-	
+				<input type="submit" name="registrati" id="registrati" value="Registrati"<input>
 			</form>
 
-			<a id="registrati" href="file:///C:/Users/alessio/Desktop/sito_amm/registrazione.html">Registrati</a>
+			
 		</div>
                 
                 
@@ -191,7 +191,7 @@ include('visualizza.php');
                         //REGISTRAZIONE
                         if ( isset($_POST['registrati']) )
                         {
-                            registrati_stampa(FALSE,FALSE,FALSE,FALSE);
+                            registrati_stampa();
                         }
                         
                         if ( isset($_POST['conferma']) )
