@@ -292,6 +292,8 @@ include('visualizza.php');
                             echo "<h1>Progetto AMM 2014 Cannas Alessio 48188</h1> </br>";
                             echo "<h1>Funzionalità implementate:</h1> </br>";
                             echo "<h1>-Uso di html</h1> </br>";
+                            	echo "<h3>-Sistema menuBar per la ricerca dei prodotti per categoria</h3> </br>";
+                            	echo "<h3>-Sistema visualizzazione Login</h3> </br>";
                             
                             echo "<h1>-Uso di Php/MySQL</h1> ";
                             	echo "<h3>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h3> </br>";
