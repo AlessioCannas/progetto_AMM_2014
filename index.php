@@ -46,7 +46,7 @@ include('visualizza.php');
 			<input type="submit" name="XboxOne" value="XboxOne"/>
 			<input type="submit" name="Nintendo wiiU" value="Nintendo wiiU"/>
 			<input type="submit" name="Accessori" value="Accessori"/>
-			<input type="submit" name="Offerte" value="Offerte"/>	
+				
 			<input type="submit" name="Cerca" value="Cerca"/>
 			<input type="submit" name="Negozi" value="Negozi"/>
                     </form>
