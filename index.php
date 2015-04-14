@@ -292,11 +292,14 @@ include('visualizza.php');
                             echo "<h1>Progetto AMM 2014 Cannas Alessio 48188</h1> </br>";
                             echo "<h1>Funzionalità implementate:</h1> </br>";
                             echo "<h1>-Uso di html</h1> </br>";
+                            
                             echo "<h1>-Uso di Php</h1> </br>";
-                            echo "<h1>-Uso di MySQL</h1> </br>";
-                            echo "<h1>-Uso di jQuery (anche se in minima parte)</h1> </br>";
-                            echo "<h1>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h1> </br>";
+                            
+                            echo "<h1>-Uso di MySQL</h1> ";
+                            		echo "<h3>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h3> </br>";
     
+                            echo "<h1>-Uso di jQuery (anche se in minima parte)</h1> </br>";
+                            
                         }
                         
                         if ( isset($_POST['logout']) )
