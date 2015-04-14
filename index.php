@@ -292,20 +292,20 @@ include('visualizza.php');
                        	    echo "
                             	  <h1>Progetto AMM 2014 Cannas Alessio 48188</h1> </br>
                             	  
-                                  <h1>Funzioni implementate:</h1> </br>
+                                  <h1>Funzioni implementate:</h1> 
                             	
                             	<div id='menubar4' >	
                             	  <h1>-Uso di html</h1> </br>
-                            		<h3>-Sistema menuBar per la ricerca dei prodotti per categoria</h3> </br>
-                            		<h3>-Sistema visualizzazione Login</h3> </br>
+                            		<h4>-Sistema menuBar per la ricerca dei prodotti per categoria</h4> </br>
+                            		<h4>-Sistema visualizzazione Login</h4> </br>
                             	</div >
                             	
                             	<div id='menubar4' >
 	                          <h1>-Uso di Php/MySQL</h1> 
-	                            	<h3>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h3> </br>
-	                            	<h3>-Sistema di registrazione, recupero dell'input utente tramite Php e salvataggio su database con MySQL</h3> 
-	    				<h3>-Sistema di visualizzazione dei giochi per categoria, recuperati da database</h3> 
-	    				<h3>-Sistema di ricerca e di visualizzazione in base al nome e alla categoria</h3> 
+	                            	<h4>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h4> 
+	                            	<h4>-Sistema di registrazione, recupero dell'input utente tramite Php e salvataggio su database con MySQL</h4> 
+	    				<h4>-Sistema di visualizzazione dei giochi per categoria, recuperati da database</h4> 
+	    				<h4>-Sistema di ricerca e di visualizzazione in base al nome e alla categoria</h4> 
     				</div >
     				
                            	<h1>-Uso di jQuery (anche se in minima parte)</h1> </br>
