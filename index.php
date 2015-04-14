@@ -140,6 +140,12 @@ include('visualizza.php');
                 
                 
             <?php
+            		if ( isset($_POST['PC']) )
+                        {
+                            vedi("'PC'");
+                            
+                        }
+                        
                         if ( isset($_POST['Ps3']) )
                         {
                             vedi("'Ps3'");
