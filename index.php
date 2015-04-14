@@ -45,10 +45,10 @@ include('visualizza.php');
                         <input type="submit" name="Xbox360" value="Xbox360"/>
 			<input type="submit" name="XboxOne" value="XboxOne"/>
 			<input type="submit" name="Nintendo wiiU" value="Nintendo wiiU"/>
-			<input type="submit" name="Accessori" value="Accessori"/>
-				
+			
+			<input type="submit" name="Carrello" value="Carrello"/>
 			<input type="submit" name="Cerca" value="Cerca"/>
-			<input type="submit" name="Negozi" value="Negozi"/>
+			<input type="submit" name="Progetto" value="Progetto"/>
                     </form>
 		</div>
 
