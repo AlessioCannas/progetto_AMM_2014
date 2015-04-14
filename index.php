@@ -171,6 +171,12 @@ include('visualizza.php');
                             
                         }
                         
+                        if ( isset($_POST['Nintendo wiiU']) )
+                        {
+                            vedi("'Nintendo wiiU'");
+                            
+                        }
+                        
                         if ( isset($_POST['Cerca']) )
                         {
                             cerca();
