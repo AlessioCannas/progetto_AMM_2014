@@ -287,6 +287,12 @@ include('visualizza.php');
                                                    
                         }
                         
+                        if ( isset($_POST['Progetto']) )
+                        {
+                            echo "<h1>Progetto AMM 2014 Cannas Alessio 48188</h1> </br>";
+    
+                        }
+                        
                         if ( isset($_POST['logout']) )
                         {
                             session_destroy();
