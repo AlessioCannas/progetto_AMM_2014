@@ -295,6 +295,12 @@ include('visualizza.php');
                                   <h1>Funzioni implementate:</h1> 
                             	
                             	<div id='menubar4' >	
+                            	  <h1>-Dati di accesso</h1> 
+                            		<h4>-User: marco Password:pass1</h4> 
+                            		
+                            	</div >
+                            	
+                            	<div id='menubar4' >	
                             	  <h1>-Uso di html</h1> 
                             		<h4>-Sistema menuBar per la ricerca dei prodotti per categoria</h4> 
                             		<h4>-Sistema visualizzazione Login</h4> </br>
@@ -315,7 +321,7 @@ include('visualizza.php');
                            	
                            	<div id='menubar4' >
                            	  <h1>-Bug </h1>
-                           		<h4>-il progetto è pieno di bug , avrei voluto creare un sistema di e-commerce , con un carrello ed il resto ma non sono riuscito ad implemmentarlo</h4> 
+                           		<h4>-nel progetto ci sono molti bug , avrei voluto creare un sistema di e-commerce , con un carrello ed il resto ma non sono riuscito ad implementarlo</h4> 
                            	</div >
                            	
                            	</div >";
