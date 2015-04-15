@@ -44,7 +44,7 @@ include('visualizza.php');
                         <input type="submit" name="Ps4" value="Ps4"/>
                         <input type="submit" name="Xbox360" value="Xbox360"/>
 			<input type="submit" name="XboxOne" value="XboxOne"/>
-			
+			<input type="submit" name="Nintendo" value="Nintendo"/>
 			
 			
 			<input type="submit" name="Cerca" value="Cerca"/>
@@ -171,7 +171,7 @@ include('visualizza.php');
                             
                         }
                         
-                        if ( isset($_POST['Nintendo wiiU']) )
+                        if ( isset($_POST['Nintendo']) )
                         {
                             vedi("'Nintendo'");
                             
