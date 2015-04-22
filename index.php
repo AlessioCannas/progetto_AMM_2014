@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 include('visualizza.php');
+include('carrello.php');
 
 
 ?>
@@ -49,6 +50,7 @@ include('visualizza.php');
 			
 			<input type="submit" name="Cerca" value="Cerca"/>
 			<input type="submit" name="Progetto" value="Progetto"/>
+			<input type="submit" name="Carrello" value="Carrello"/>
                     </form>
 		</div>
 
@@ -334,6 +336,17 @@ include('visualizza.php');
                             
                         }
                         
+                        if ( isset($_POST['Carrello']) )
+                        {
+                            stampa($_SESSION['carrello']);
+                        }
+                        
+                        if ( isset($_POST['paga']) )
+                        {
+                            $soldi = $_POST['importo'];
+                            pagamento ($_SESSION['carrello'],$soldi);
+                        }
+                        
                         if ( isset($_POST['logout']) )
                         {
                             session_destroy();
@@ -341,6 +354,54 @@ include('visualizza.php');
                         }
                               
              
+                ?>
+                
+                <?php
+                     
+                    
+                    $cmd = $_GET['cmd'];
+                    $id = $_GET['id'];
+                    $prez = $_GET['prez'];
+                    
+                    if(!isset($cmd) || !isset($id))
+                    {
+                        $cmd = 'no-op';
+                    }
+                    
+                    if (isset($cmd))
+                    {
+                            switch ($cmd)
+                            {
+                                case 'a':
+                                if (isset($id)) 
+                                {
+                                   $id_corretto = str_replace('-', ' ', $id);
+                                  
+                                   aggiungi ( $id_corretto, $prez, 1 ); 
+                                }
+                                    break;
+                                                
+                                case 'i':
+                                    incrementa($id);
+                                    break;
+                                
+                                case 'd':
+                                    decrementa($id);
+                                    break;
+                                
+                                case 'e':
+                                    elimina($id);
+                                    break;
+                                case 's':
+                                    svuota($_SESSION['carrello']);
+                                    break;
+                                
+                                case 'no-op':
+                                    // nessuna operazione
+                                    break;
+                            }
+                    }
+                    
                 ?>
                 
                 <script type="text/javascript">
