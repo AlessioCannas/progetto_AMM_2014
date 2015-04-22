@@ -78,7 +78,7 @@ function calcola_totale (array $a,$mod)
                         ."<h1>Inserisci il denaro</h1>"
                     ."</td>"
                     ."<td>"
-                        ."<form id='soldi' action='index2.php' method='post'>
+                        ."<form id='soldi' action='index.php' method='post'>
 
                         <label for='Importo'>Importo in $ </label>
                         <input type='text' name='importo' value='importo'><br>
@@ -89,7 +89,7 @@ function calcola_totale (array $a,$mod)
                 ."</tr>"
                 ."<tr>"
                     ."<td>"
-                        ."<a id='svuota' href='index2.php?cmd=s&id=0'>Svuota Carrello</a>"
+                        ."<a id='svuota' href='index.php?cmd=s&id=0'>Svuota Carrello</a>"
                     ."</td>"
                     ."<td>"
                        
@@ -103,7 +103,7 @@ function calcola_totale (array $a,$mod)
 
 /*
  * <input type="submit" name="Paga" id="paga" value="Termina e Paga"<input>
-    ."<a id='paga' href='index2.php?cmd=p&id=0'>termina e paga</a>"
+    ."<a id='paga' href='index.php?cmd=p&id=0'>termina e paga</a>"
  */
 function stampa (array $a)
 {
@@ -124,9 +124,9 @@ function stampa (array $a)
             
             echo "<div id='menubar4' >"
                     . "<h1>$t ___prezzo: $p $  ____numero pezzi: $q</h1> "
-                    . "<a href='index2.php?cmd=i&id=$i' >+</a> "
-                    . "<a href='index2.php?cmd=d&id=$i' >-</a>"
-                    . "<a href='index2.php?cmd=e&id=$i' >Elimina</a>"
+                    . "<a href='index.php?cmd=i&id=$i' >+</a> "
+                    . "<a href='index.php?cmd=d&id=$i' >-</a>"
+                    . "<a href='index.php?cmd=e&id=$i' >Elimina</a>"
                     . "</div>";
             
             
