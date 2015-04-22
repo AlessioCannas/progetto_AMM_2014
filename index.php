@@ -103,6 +103,8 @@ include('carrello.php');
                                                                 $_SESSION['logged'] = TRUE;
                                                          if ( !isset( $_SESSION['nome']) )
                                                                 $_SESSION['nome'] = $nome;
+                                                         if ( !isset( $_SESSION['carrello']) )
+                                                                $_SESSION['carrello'] = array();
                                                          
                                                          break;
                                                          $loggato = TRUE;
