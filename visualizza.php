@@ -37,7 +37,9 @@ function vedi ($piattaforma)
                             
                             while($riga= mysql_fetch_array ($Risultato) )
                             {
-                                    $titolo = $riga[titolo]; 
+                                    $titolo = $riga[titolo];
+                                    $titolo1 = str_replace(' ', '-', $titolo);
+                                    
                                     $prezzo = $riga[prezzo];
 
                                     $foto = $riga[foto];
@@ -71,6 +73,7 @@ function vedi ($piattaforma)
                                             </table>
 
                                             <a id=$id_vedi>Vedi</a>
+                                            <a href='index2.php?cmd=a&id=$titolo1&prez=$prezzo'>Aggiungi</a>
 
                                           </div>";		
                             }
