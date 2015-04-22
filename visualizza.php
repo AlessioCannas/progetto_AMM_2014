@@ -73,7 +73,7 @@ function vedi ($piattaforma)
                                             </table>
 
                                             <a id=$id_vedi>Vedi</a>
-                                            <a href='index2.php?cmd=a&id=$titolo1&prez=$prezzo'>Aggiungi</a>
+                                            <a href='index.php?cmd=a&id=$titolo1&prez=$prezzo'>Aggiungi</a>
 
                                           </div>";		
                             }
