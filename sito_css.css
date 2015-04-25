@@ -6,7 +6,7 @@
     						background: #333;
     						padding: 12px 24px;
     						color:#FFF;
-    						
+    						margin-right: 10px;
     						text-decoration:none;
     						border-radius: 3px;
     						transition: background 0.3s linear 0s, color 0.3s linear 0s;
@@ -18,7 +18,7 @@
 					padding: 24px; 
 					border:#FFF 1px dashed; 
 					background:#333; 
-					//border-radius: 10px 10px 10px 10px;
+					border-radius: 10px 10px 10px 10px;
 					border-color: #1C1C1C;
 					border-style: solid; 
 
