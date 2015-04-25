@@ -40,6 +40,8 @@ function vedi ($piattaforma)
                                     $titolo = $riga['titolo'];
                                     $titolo1 = str_replace(' ', '-', $titolo);
                                     
+                                    $descrizione = $riga['desc'];
+                                    
                                     $prezzo = $riga['prezzo'];
 
                                     $foto = $riga['foto'];
