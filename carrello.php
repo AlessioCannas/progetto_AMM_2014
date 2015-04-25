@@ -189,9 +189,9 @@ function stampa_ordine ()
         {
             echo "</td>"
             . "<td>"
-                    . "<a href='index.php?cmd=sped&id=$n_ordine&prez=0'>Spedisci</a></br>"
-                    . "<a href='index.php?cmd=cons&id=$n_ordine&prez=0'>In consegna</a></br>"
-                    . "<a href='index.php?cmd=comp&id=$n_ordine&prez=0'>COMPLETATO</a>";     
+                    . "<a class='gestioneOrdine' href='index.php?cmd=sped&id=$n_ordine&prez=0'>Spedisci</a></br>"
+                    . "<a class='gestioneOrdine' href='index.php?cmd=cons&id=$n_ordine&prez=0'>In consegna</a></br>"
+                    . "<a class='gestioneOrdine' href='index.php?cmd=comp&id=$n_ordine&prez=0'>COMPLETATO</a>";     
             
         }
         
