@@ -134,7 +134,7 @@ include('carrello.php');
                                              }
                                              
                                              
-                                               header ("Location: index2.php");
+                                               header ("Location: index.php");
                                          }
                                          
                                        
