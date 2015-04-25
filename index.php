@@ -51,7 +51,7 @@ include('carrello.php');
 			<input type="submit" name="Cerca" value="Cerca"/>
 			<input type="submit" name="Progetto" value="Progetto"/>
 			<input type="submit" name="Carrello" value="Carrello"/>
-			<input type="submit" name="Area" value="Area"/>
+			<input type="submit" name="Area" value="Area Personale"/>
                     </form>
 		</div>
 
