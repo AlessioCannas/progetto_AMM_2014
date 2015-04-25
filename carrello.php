@@ -10,7 +10,7 @@ function aggiungi ( $titolo, $prezzo, $quantita )
     {
         $_SESSION['carrello'][] = $prova;
 
-        echo "<h1>ho fatto le opererazioni richieste</h1>";
+        echo "<h1>$prova['titolo'] aggiunto al carrello</h1>";
     } 
 
 }
