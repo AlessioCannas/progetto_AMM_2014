@@ -79,8 +79,6 @@ function calcola_totale (array $a,$mod)
                     ."</td>"
                     ."<td>"
                     ."<a id='svuota' href='index.php?cmd=s&id=0'>Svuota Carrello</a>"
-                        
-                    </form>"
                     ."</td>"
                 ."</tr>"
                 ."<tr>"
@@ -91,6 +89,7 @@ function calcola_totale (array $a,$mod)
                         <input type='text' name='importo' value='importo'><br>
 
                         <input type='submit' name='paga' id='paga' value='paga'<input>
+                        </form>"
                     ."</td>"
                     ."<td>"
                        
