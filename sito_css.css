@@ -229,7 +229,7 @@
                                         
                                         a#consegna{
 						position: relative;
-                                                margin-top: 50px;
+                                                margin-right:250px;
                                            }
 					
 			input#paga,a#spedisci,a#consegna{ 
