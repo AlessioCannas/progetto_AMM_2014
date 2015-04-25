@@ -362,7 +362,7 @@ include('carrello.php');
                         
                         if ( isset($_POST['Carrello']) )
                         {
-                        	if( isset($_SESSION['Carrello']) )
+                        	if( $logged )
                             		stampa($_SESSION['carrello']);
                             	else
                             		echo "<h1>non sei loggato</h1>";
@@ -376,7 +376,7 @@ include('carrello.php');
                         
                         if ( isset($_POST['Area']) )
                         {
-                        	if( isset($_SESSION['Carrello']) )
+                        	if( $logged )
                             		stampa_ordine ();
                             	else
                             		echo "<h1>non sei loggato</h1>";
