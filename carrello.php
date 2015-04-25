@@ -228,10 +228,54 @@ function ordina ()
                 {
                     echo "Error  ";
                 }
-            }       
+            }
+            
+
+            $conn = connetti();
+            $imp = calcola_totale($_SESSION['carrello'],FALSE);
+            $data = date ("Y-m-d");
+            
+            
+            $query_insert = "INSERT INTO `ordini`(`id_ordine`, `id_utente`, `importo_ordine`, `stato_ordine`, `data_ordine`) VALUES ( NULL,'".$_SESSION['id']."',".$imp.",'pagamento effettuato', '".$data."' )";
+                                               
+            $risultato = mysql_query($query_insert, $conn );
+            
+            
+            $query = "SELECT * FROM `ordini` ";
+                
+            $risultato = mysql_query($query, $conn );
+            
+            while ($riga = mysql_fetch_array($risultato))
+            {
+                $ordine = $riga['id_ordine']; 
+            }
+            /////////////////////////////////////////////////////////////////
+            
+            for($i=0;$i<count($_SESSION['carrello']);$i++)
+            {
+                $t = "'".$_SESSION['carrello'][$i]['titolo']."'";
+                $q = $_SESSION['carrello'][$i]['quantita'];
+                 
+                $query_insert = "INSERT INTO ordine_prodotto (`num_ordine`, `nome_prodotto`, `quantita`) VALUES ( $ordine , $t , $q )";
+                                               
+                $risultato = mysql_query($query_insert, $conn );
+            }
+            
+
+            
     }
                         
     
+}
+
+function stato_ordine ()
+{
+    //$conn = mysqli_connect("localhost","root","","amm_alessio"); 
+    $conn = connetti();
+    
+    $query = "UPDATE ordini SET stato_ordine=['prova'] WHERE id_ordine = 1 ";
+    
+    $result = mysql_query( $query, $conn);
 }
 
 function svuota ()
