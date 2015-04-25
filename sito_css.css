@@ -387,6 +387,10 @@
                                                     margin-top: 170px;
                                                 }
                                                 
+                                                a#id_vedi {
+                                                		margin-top: 20px;	
+                                                	  }
+                                                
                                                 .errore {
                                                             color: red;
                                                             display: none;
