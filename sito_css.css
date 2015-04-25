@@ -244,6 +244,10 @@
     						transition: background 0.3s linear 0s, color 0.3s linear 0s;
 					}
 					
+			div#menubar4 > a{
+    						margin-left: 100px;
+					}
+					
 				
 					
 			input#paga{ 
