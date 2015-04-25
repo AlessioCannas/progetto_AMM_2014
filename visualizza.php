@@ -37,13 +37,13 @@ function vedi ($piattaforma)
                             
                             while($riga= mysql_fetch_array ($Risultato) )
                             {
-                                    $titolo = $riga[titolo];
+                                    $titolo = $riga['titolo'];
                                     $titolo1 = str_replace(' ', '-', $titolo);
                                     
-                                    $prezzo = $riga[prezzo];
+                                    $prezzo = $riga['prezzo'];
 
-                                    $foto = $riga[foto];
-                                    $trailer = $riga[trailer];
+                                    $foto = $riga['foto'];
+                                    $trailer = $riga['trailer'];
 
                                     echo "<div id=$id >
 
