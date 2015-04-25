@@ -7,7 +7,7 @@ include('carrello.php');
 ?>
 
 <?php
-	//$conn= mysql_connect("localhost","root","");   
+	   
         $conn= mysql_connect("localhost","cannasAlessio","volpe795");
 	if(!$conn)
 	{
@@ -254,16 +254,7 @@ include('carrello.php');
                                                    $nome_error = FALSE;
                                                }
                                                
-                                               /*
-                                               echo "<script type="."text/javascript".">
-
-                                                           
-                                                                $('iframe').css('display','none');
-                                                           
-                                                                $('iframe').css('display','block');
-
-                                                            </script>";
-                                               */
+                                             
                                                if( $_POST['anno']=="empty" || $_POST['mese']=="empty" || $_POST['giorno']=="empty" )
                                                {  
                                                    $data_error = TRUE;
@@ -362,10 +353,7 @@ include('carrello.php');
                         
                         if ( isset($_POST['Carrello']) )
                         {
-                        	if( $logged )
-                            		stampa($_SESSION['carrello']);
-                            	else
-                            		echo "<h1>non sei loggato</h1>";
+                            	stampa($_SESSION['carrello']);
                         }
                         
                         if ( isset($_POST['paga']) )
@@ -376,11 +364,7 @@ include('carrello.php');
                         
                         if ( isset($_POST['Area']) )
                         {
-                        	if( $logged )
                             		stampa_ordine ();
-                            	else
-                            		echo "<h1>non sei loggato</h1>";
-                            
                         }
                         
                         if ( isset($_POST['logout']) )
