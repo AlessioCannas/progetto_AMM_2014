@@ -71,11 +71,11 @@ function calcola_totale (array $a,$mod)
         echo "<div id='menubar4' >"
              ."<table>"
                 ."<tr>"
-                    ."<h1> spesa complessiva $totale $ + spese di spedizione </h1>"
+                    ."<h4> spesa complessiva $totale $ + spese di spedizione </h4>"
                 ."</tr>"
                 ."<tr>"
                     ."<td>"
-                        ."<h1>Inserisci il denaro</h1>"
+                        ."<h4>Inserisci il denaro</h4>"
                     ."</td>"
                     ."<td>"
                         ."<form id='soldi' action='index.php' method='post'>
@@ -313,10 +313,5 @@ function pagamento (array $a, $importo)
     
 }
 
-
-function ciao ()
-{
-    echo "<h1>ciao</h1>";
-}
 
 ?>
