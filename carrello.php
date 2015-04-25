@@ -283,9 +283,14 @@ function stato_ordine ($ordine,$mod)
     $result = mysql_query( $query, $conn);
     
     if($result)
-        echo "<h1> data update success $result</h1>";
+        echo "<script type="."text/javascript".">
+                 alert('operazione completata');	
+        </script>";
     else
-        echo "<h1> ERROR $result</h1>";
+        echo "<script type="."text/javascript".">
+               alert('ERRORE');	
+        </script>";
+        
 }
 
 function svuota ()
