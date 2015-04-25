@@ -265,6 +265,8 @@ function stato_ordine ($ordine,$mod)
     
     $result = mysql_query( $query, $conn);
     
+     stampa_ordine();
+     
     if($result)
     {
 
@@ -278,9 +280,6 @@ function stato_ordine ($ordine,$mod)
                alert('ERRORE');	
         </script>";
     }
-        
-        
-    stampa_ordine();
         
 }
 
