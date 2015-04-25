@@ -222,7 +222,7 @@
     						transition: background 0.3s linear 0s, color 0.3s linear 0s;
 					}
 					
-					a#svuota,input#paga{
+					a#consegna,input#spedisci{
                                                 margin-bottom: 50px;
                                            }
 					
