@@ -8,15 +8,9 @@ function aggiungi ( $titolo, $prezzo, $quantita )
         echo "<h1>non ti sei loggato</h1>";
     else 
     {
-        
-            $_SESSION['carrello'][] = $prova;
-        
-        echo '<script type="text/javascript"> alert('.'operazione effetuata'.');</script>';
-        
-        
-        //echo "<h1>ho fatto le opererazioni richieste</h1>";
-        
-        
+        $_SESSION['carrello'][] = $prova;
+
+        echo "<h1>ho fatto le opererazioni richieste</h1>";
     } 
 
 }
