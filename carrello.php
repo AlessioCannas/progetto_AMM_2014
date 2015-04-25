@@ -123,7 +123,9 @@ function stampa (array $a)
            
             
             echo "<div id='menubar4' >"
-                    . "<h1>$t ___prezzo: $p $  ____numero pezzi: $q</h1> "
+                    . "<h4>$t </h4> "
+                    . "<h4>prezzo: $p $ </h4> "
+                    . "<h4>numero pezzi: $q</h4> "
                     . "<a href='index.php?cmd=i&id=$i' >+</a> "
                     . "<a href='index.php?cmd=d&id=$i' >-</a>"
                     . "<a href='index.php?cmd=e&id=$i' >Elimina</a>"
