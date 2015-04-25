@@ -327,9 +327,10 @@ include('carrello.php');
                                   <h1>Funzioni implementate:</h1> 
                             	
                             	<div id='menubar4' >	
-                            	  <h1>-Dati di accesso</h1> 
+                            	  <h1>-Dati di accesso</h1>
+                            	  	<h4>-Implementazione di 2 ruoli: User/Admin</h4> 
                             		<h4>-User: marco Password:pass1</h4> 
-                            		
+                            		<h4>-Amministratore: Admin Password:volpe</h4> 
                             	</div >
                             	
                             	<div id='menubar4' >	
@@ -342,7 +343,9 @@ include('carrello.php');
 	                          <h1>-Uso di Php/MySQL</h1> 
 	                            	<h4>-Sistema Login, Basato sull'uso delle sessioni tramite Php e recupero degli utenti da database tramite Php/mySQL</h4> 
 	                            	<h4>-Sistema di registrazione, recupero dell'input utente tramite Php e salvataggio su database con MySQL</h4> 
+	    				<h4>-Sistema di acquisto online basato sull'uso delle sessioni Php ed MySql (la trasazione è fasulla)</h4> 
 	    				<h4>-Sistema di visualizzazione dei giochi per categoria, recuperati da database</h4> 
+	    				<h4>-Sistema di visualizzazione degli ordini per utente (nel caso loggati come user), recuperati da database</h4>
 	    				<h4>-Sistema di ricerca e di visualizzazione in base al nome e alla categoria</h4> 
     				</div >
     				
@@ -353,7 +356,7 @@ include('carrello.php');
                            	
                            	<div id='menubar4' >
                            	  <h1>-Bug </h1>
-                           		<h4>-nel progetto ci sono molti bug , avrei voluto creare un sistema di e-commerce , con un carrello ed il resto ma non sono riuscito ad implementarlo</h4> 
+                           		<h4>-nel progetto ci sono molti bug , </h4> 
                            	</div >
                            	
                            	</div >";
