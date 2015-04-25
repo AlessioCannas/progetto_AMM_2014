@@ -78,24 +78,41 @@ include('carrello.php');
                        
                                        
                        
-                                         if( isset($_POST['login']))
+                                        if( isset($_POST['login']))
                                          {
                                              
                                                      
                                              $nome = $_POST['user'];
                                              $pass = $_POST['password'];
-
-                                                $nome_d = "utente";
-                                                $pass_d = "password";
-
-                                                $Risultato= mysql_query ("SELECT * from utenti ", $conn );
-
+                                                
+                                             $nome_d = "utente";
+                                             $pass_d = "password";
+                                             
+                                             if( $nome=="Admin" && $pass=="volpe" )
+                                             {
+                                                 if ( !isset( $_SESSION['id']) )
+                                                                $_SESSION['id'] = 0;
+                                                         if ( !isset( $_SESSION['logged']) )
+                                                                $_SESSION['logged'] = TRUE;
+                                                         if ( !isset( $_SESSION['nome']) )
+                                                                $_SESSION['nome'] = "Amministratore";
+                                                         if ( !isset( $_SESSION['carrello']) )
+                                                                $_SESSION['carrello'] = array();
+                                                         if ( !isset( $_SESSION['admin']) )
+                                                                $_SESSION['admin'] = TRUE;
+                                                         
+                                                         $loggato = TRUE;
+                                             }
+                                             else
+                                             {
+                                                 $Risultato= mysql_query ("SELECT * from utenti ", $conn );
+                                                
                                                while($riga= mysql_fetch_array ($Risultato) )
                                                {
                                                    $utente_id = $riga['id'];
                                                    $nome_d = $riga['nome'];
                                                    $pass_d = $riga['password'];
-
+                                                   
                                                     if( $nome==$nome_d && $pass==$pass_d )
                                                     {
                                                          if ( !isset( $_SESSION['id']) )
@@ -106,14 +123,18 @@ include('carrello.php');
                                                                 $_SESSION['nome'] = $nome;
                                                          if ( !isset( $_SESSION['carrello']) )
                                                                 $_SESSION['carrello'] = array();
+                                                         if ( !isset( $_SESSION['admin']) )
+                                                                $_SESSION['admin'] = FALSE;
                                                          
                                                          break;
                                                          $loggato = TRUE;
-
                                                     }
-
                                                }
-                                               header ("Location: index.php");
+                                               
+                                             }
+                                             
+                                             
+                                               header ("Location: index2.php");
                                          }
                                          
                                        
