@@ -424,6 +424,15 @@ include('carrello.php');
                                 case 's':
                                     svuota($_SESSION['carrello']);
                                     break;
+                                case 'sped':
+                                    stato_ordine($id,'In spedizione');
+                                    break;
+                                case 'cons':
+                                    stato_ordine($id,'In consegna');
+                                    break;
+                                case 'comp':
+                                    stato_ordine($id,'Ordine COMPLETATO');
+                                    break;
                                 
                                 case 'no-op':
                                     // nessuna operazione
