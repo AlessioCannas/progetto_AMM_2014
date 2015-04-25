@@ -114,11 +114,13 @@ function vedi_cerca ($titolo,$piattaforma)
                         
 			while($riga= mysql_fetch_array ($Risultato) )
 			{
-				$titolo = $riga[titolo]; 
-				$prezzo = $riga[prezzo];
+				$titolo = $riga['titolo']; 
+				 $titolo1 = str_replace(' ', '-', $titolo);
+				$prezzo = $riga['prezzo'];
 				$prezzo = (string)$prezzo;
-				$foto = $riga[foto];
-				$trailer = $riga[trailer];
+				$foto = $riga['foto'];
+				$trailer = $riga['trailer'];
+				$descrizione = $riga['desc'];
 				
 				echo "<div id=$id >
 					
