@@ -126,7 +126,7 @@ function stampa (array $a)
                     . "<h4>$t </h4> "
                     . "<h4>prezzo: $p $ </h4> "
                     . "<h4>numero pezzi: $q</h4> "
-                    . "<a href='index.php?cmd=i&id=$i' >+</a> "
+                    . "<a href='index.php?cmd=i&id=$i' >+</a> </br></br>"
                     . "<a href='index.php?cmd=d&id=$i' >-</a>"
                     . "<a href='index.php?cmd=e&id=$i' >Elimina</a>"
                     . "</div>";
