@@ -354,10 +354,7 @@ include('carrello.php');
                            		<h4>-Sistema di comparsa e scomparsa dei trailer dei giochi sul tasto 'vedi'</h4> 
                            	</div >
                            	
-                           	<div id='menubar4' >
-                           	  <h1>-Bug </h1>
-                           		<h4>-nel progetto ci sono molti bug , </h4> 
-                           	</div >
+                           	
                            	
                            	</div >";
                             
