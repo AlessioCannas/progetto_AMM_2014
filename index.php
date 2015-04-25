@@ -51,6 +51,7 @@ include('carrello.php');
 			<input type="submit" name="Cerca" value="Cerca"/>
 			<input type="submit" name="Progetto" value="Progetto"/>
 			<input type="submit" name="Carrello" value="Carrello"/>
+			<input type="submit" name="Area" value="Area"/>
                     </form>
 		</div>
 
@@ -347,6 +348,11 @@ include('carrello.php');
                         {
                             $soldi = $_POST['importo'];
                             pagamento ($_SESSION['carrello'],$soldi);
+                        }
+                        
+                        if ( isset($_POST['Area']) )
+                        {
+                            stampa_ordine ();
                         }
                         
                         if ( isset($_POST['logout']) )
