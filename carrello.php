@@ -8,24 +8,7 @@ function aggiungi ( $titolo, $prezzo, $quantita )
         echo "<h1>non ti sei loggato</h1>";
     else 
     {
-        /*
-        $esiste = FALSE;
         
-        for($i=0;$i<count($_SESSION['carrello']);$i++)
-        {
-            echo "".$prova[$i]['titolo']." ".$_SESSION['carrello'][$i]['titolo']."";
-            
-            if(strcmp($prova[$i]['titolo'], $_SESSION['carrello'][$i]['titolo'])==0)
-            {
-                $esiste = TRUE;
-                break;
-            }
-                
-        }
-        
-        if($esiste)
-            incrementa($i);
-        else*/
             $_SESSION['carrello'][] = $prova;
         
         echo '<script type="text/javascript"> alert('.'operazione effetuata'.');</script>';
@@ -283,13 +266,21 @@ function stato_ordine ($ordine,$mod)
     $result = mysql_query( $query, $conn);
     
     if($result)
+    {
+
         echo "<script type="."text/javascript".">
                  alert('operazione completata');	
         </script>";
+    }
     else
+    {
         echo "<script type="."text/javascript".">
                alert('ERRORE');	
         </script>";
+    }
+        
+        
+    stampa_ordine();
         
 }
 
