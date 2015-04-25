@@ -138,6 +138,68 @@ function stampa (array $a)
     
 }
 
+function stampa_ordine ()
+{
+    $conn = connetti();
+    //$conn = mysqli_connect("localhost","root","","amm_alessio");
+    
+    
+        $admin = $_SESSION['admin'];
+        
+        if( $admin )
+            $query = "SELECT * FROM ordini ";
+        else 
+            $query = "SELECT * FROM ordini WHERE id_utente = ".$_SESSION['id']." ";
+        
+    
+    
+    $risultato = mysql_query($query, $conn );
+    
+    while( $riga = mysql_fetch_array($risultato) )
+    {
+        $n_ordine = $riga['id_ordine'];
+        $imp = $riga['importo_ordine'];
+        $s_ordine = $riga['stato_ordine'];
+        $d_ordine = $riga['data_ordine'];
+        
+        echo "<div id='menubar4' >";
+        echo "<table>"
+        . "<td>"
+                . "<h4>numero ordine: $n_ordine </h4>"
+                . "<h4>importo: $imp $</h4>"
+                . "<h4>data: $d_ordine</h4>"
+                . "<h4>  stato attuale: $s_ordine </h4>"
+        . "</td>";
+           
+        $query = "SELECT * FROM ordine_prodotto WHERE num_ordine = ".$n_ordine." ";
+    
+        $risultato_1 = mysql_query($query, $conn );
+        
+        echo "<td>"
+                . "</br></br></br></br></br></br></br></br></br></br><h3 class="."prodottoOrdine".">Elenco prodotti:</h3>";
+        while( $riga1 = mysql_fetch_array($risultato_1) )
+        {
+            $tit = $riga1['nome_prodotto'];
+            $quant = $riga1['quantita'];
+            
+            echo "<h4 class="."prodottoOrdine".">-$tit x$quant</h4>";
+        }
+        
+        if( $_SESSION['admin'] )
+        {
+            echo "</td>"
+            . "<td>"
+                    . "<a href='index2.php?cmd=sped&id=$n_ordine&prez=0'>Spedisci</a></br>"
+                    . "<a href='index2.php?cmd=cons&id=$n_ordine&prez=0'>In consegna</a>";
+        }
+        
+        echo "</td>"
+        . "</table>"
+        . "</div>";
+        
+    }
+}
+
 function ordina ()
 {
     $conn= mysqli_connect("localhost","root","","amm_alessio");  
