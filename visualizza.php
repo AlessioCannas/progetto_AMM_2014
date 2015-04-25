@@ -146,6 +146,7 @@ function vedi_cerca ($titolo,$piattaforma)
 					</table>
 					
 					<a id=$id_vedi>Vedi</a>
+					<a href='index.php?cmd=a&id=$titolo1&prez=$prezzo'>Aggiungi</a>
 					
 				      </div>";		
 			}
