@@ -222,7 +222,8 @@
     						transition: background 0.3s linear 0s, color 0.3s linear 0s;
 					}
 					
-					a#consegna,input#spedisci{
+					a#spedisci{
+						position: relative;
                                                 margin-bottom: 50px;
                                            }
 					
