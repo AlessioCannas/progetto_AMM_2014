@@ -202,7 +202,8 @@ function stampa_ordine ()
 
 function ordina ()
 {
-    $conn= mysqli_connect("localhost","root","","amm_alessio");  
+    
+    $conn= mysqli_connect("localhost","cannasAlessio","volpe795","amm14_cannasAlessio");  
     
     if(!isset($_SESSION['carrello']))
         echo 'non ti sei loggato';
