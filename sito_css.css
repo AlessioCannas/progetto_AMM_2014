@@ -226,6 +226,11 @@
 						position: relative;
                                                 margin-bottom: 150px;
                                            }
+                                        
+                                        a#consegna{
+						position: relative;
+                                                margin-top: 50px;
+                                           }
 					
 			input#paga,a#spedisci,a#consegna{ 
 					//	padding: 24px; 
