@@ -78,18 +78,19 @@ function calcola_totale (array $a,$mod)
                         ."<h4>Inserisci il denaro</h4>"
                     ."</td>"
                     ."<td>"
+                    ."<a id='svuota' href='index.php?cmd=s&id=0'>Svuota Carrello</a>"
+                        
+                    </form>"
+                    ."</td>"
+                ."</tr>"
+                ."<tr>"
+                    ."<td>"
                         ."<form id='soldi' action='index.php' method='post'>
 
                         <label for='Importo'>Importo in $ </label>
                         <input type='text' name='importo' value='importo'><br>
 
                         <input type='submit' name='paga' id='paga' value='paga'<input>
-                    </form>"
-                    ."</td>"
-                ."</tr>"
-                ."<tr>"
-                    ."<td>"
-                        ."<a id='svuota' href='index.php?cmd=s&id=0'>Svuota Carrello</a>"
                     ."</td>"
                     ."<td>"
                        
