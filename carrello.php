@@ -189,8 +189,10 @@ function stampa_ordine ()
         {
             echo "</td>"
             . "<td>"
-                    . "<a id='spedisci' class="."prodottoOrdine"." href='index2.php?cmd=sped&id=$n_ordine&prez=0'>Spedisci</a></br>"
-                    . "<a id='consegna' class="."prodottoOrdine"." href='index2.php?cmd=cons&id=$n_ordine&prez=0'>In consegna</a>";
+                    . "<a href='index2.php?cmd=sped&id=$n_ordine&prez=0'>Spedisci</a></br>"
+                    . "<a href='index2.php?cmd=cons&id=$n_ordine&prez=0'>In consegna</a></br>"
+                    . "<a href='index2.php?cmd=comp&id=$n_ordine&prez=0'>COMPLETATO</a>";     
+            
         }
         
         echo "</td>"
@@ -268,14 +270,20 @@ function ordina ()
     
 }
 
-function stato_ordine ()
+function stato_ordine ($ordine,$mod)
 {
     //$conn = mysqli_connect("localhost","root","","amm_alessio"); 
     $conn = connetti();
     
-    $query = "UPDATE ordini SET stato_ordine=['prova'] WHERE id_ordine = 1 ";
+    $query = "UPDATE `ordini` SET `stato_ordine`= '$mod'  WHERE  `id_ordine` = $ordine ";
+    //UPDATE `ordini` SET `stato_ordine`= 'prova2'  WHERE `id_utente` = 1
     
     $result = mysql_query( $query, $conn);
+    
+    if($result)
+        echo "<h1> data update success $result</h1>";
+    else
+        echo "<h1> ERROR $result</h1>";
 }
 
 function svuota ()
